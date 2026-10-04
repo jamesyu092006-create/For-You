@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Little Surprise 💙</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            height:auto;
+            background: linear-gradient(135deg, #dbeafe, #eff6ff, #bfdbfe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.85);
+            padding: 40px 25px;
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            position: relative;
+            z-index: 2;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+
+        .heart {
+            font-size: 70px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        h1 {
+            color: #2563eb;
+            margin: 15px 0;
+            font-size: 35px;
+        }
+
+        p {
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        button {
+            border: none;
+            background: #2563eb;
+            color: white;
+            padding: 13px 25px;
+            border-radius: 30px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+            transform: scale(1.05);
+        }
+
+        #surprise {
+            display: none;
+            margin-top: 25px;
+            animation: appear 1s ease;
+        }
+
+        .message {
+            background: #eff6ff;
+            padding: 20px;
+            border-radius: 18px;
+            margin-top: 20px;
+        }
+
+        .photo {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 20px;
+            margin-top: 20px;
+            border: 5px solid white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .floating-heart {
+            position: absolute;
+            bottom: -50px;
+            font-size: 25px;
+            animation: floatUp 6s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+        }
+
+        @keyframes appear {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-110vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .h1 {
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .h2 {
+            left: 30%;
+            animation-delay: 2s;
+        }
+
+        .h3 {
+            left: 60%;
+            animation-delay: 1s;
+        }
+
+        .h4 {
+            left: 80%;
+            animation-delay: 3s;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="floating-heart h1">💙</div>
+    <div class="floating-heart h2">💙</div>
+    <div class="floating-heart h3">💙</div>
+    <div class="floating-heart h4">💙</div>
+
+    <div class="container">
+
+        <div class="heart">💙</div>
+
+        <h1>Hey, You! 😊</h1>
+
+        <p>
+            I made something small for you.
+            There's a little surprise waiting inside.
+        </p>
+
+        <button onclick="showSurprise()">
+            Click for your surprise ✨
+        </button>
+
+        <div id="surprise">
+
+            <div class="message">
+
+                <h2>For Someone Special 💙</h2>
+
+                <p>
+                    I just wanted to make you smile today.
+                    Thank you for being someone who makes
+                    ordinary days feel a little more special.
+                </p>
+
+                <p>
+                    I hope this little website makes your day
+                    a bit brighter. 😊
+                </p>
+
+                <h3>Have a wonderful day! 💙</h3>
+
+            </div>
+
+            
+            <img src="photo.png" class="photo">
+
+        </div>
+
+    </div>
+
+    <script>
+
+        function showSurprise() {
+
+            document.getElementById("surprise").style.display = "block";
+
+        }
+
+    </script>
+
+</body>
+</html>
